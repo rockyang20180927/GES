@@ -1,4 +1,4 @@
-package ges;
+package GES;
 
 import static org.junit.Assert.assertTrue;
 

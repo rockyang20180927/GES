@@ -1,4 +1,4 @@
-package ges;
+package GES;
 
 /**
  * Hello world!
