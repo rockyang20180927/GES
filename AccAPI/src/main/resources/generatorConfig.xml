@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+  <classPathEntry  location="D:\maven\repository\com\microsoft\sqlserver\mssql-jdbc\6.2.2.jre8\mssql-jdbc-6.2.2.jre8.jar"/>   
+  <context id="API" targetRuntime="MyBatis3">
+     <commentGenerator>              
+     <!-- 是否去除自动生成的注释 true：是 ： false:否 -->              
+     <property name="suppressAllComments" value="true" />          
+     </commentGenerator>
+    <jdbcConnection connectionURL="jdbc:sqlserver://122.227.209.244:1433;DatabaseName=GES" 
+                    driverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+                    password="yywhiter_nb1818" userId="sa" />
+    <javaTypeResolver>  
+         <property name="forceBigDecimals" value="false" />  
+     </javaTypeResolver>          
+     <javaModelGenerator targetPackage="ges.Entity"
+     					targetProject="src/main/java">
+	      <property name="enableSubPackages" value="true"/>             
+	       <!-- 从数据库返回的值被清理前后的空格  -->              
+	       <property name="trimStrings" value="true" />          
+    </javaModelGenerator>  
+    <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources">
+    </sqlMapGenerator>
+    <javaClientGenerator targetPackage="ges.Dao" targetProject="src/main/java" type="XMLMAPPER" >
+    
+    </javaClientGenerator>
+    
+ 	  <table tableName="GES_DSCACC" domainObjectName="DSCACC"
+         enableCountByExample="false" enableUpdateByExample="false"  
+         enableDeleteByExample="false" enableSelectByExample="false"  
+         selectByExampleQueryId="false">  
+         <!-- 如果设置为true，生成的model类会直接使用column本身的名字，而不会再使用驼峰命名方法，
+            比如BORN_DATE，生成的属性名字就是BORN_DATE,而不会是bornDate -->
+         <property name="useActualColumnNames" value="true" />  
+     </table> 
+  </context>
+</generatorConfiguration>

@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="ges.Dao.DSCACCMapper" >
+  <resultMap id="BaseResultMap" type="ges.Entity.DSCACC" >
+    <id column="ACC001" property="ACC001" jdbcType="VARCHAR" />
+    <result column="ACC002" property="ACC002" jdbcType="VARCHAR" />
+    <result column="ACC003" property="ACC003" jdbcType="VARCHAR" />
+    <result column="ACC004" property="ACC004" jdbcType="VARCHAR" />
+    <result column="ACC005" property="ACC005" jdbcType="VARCHAR" />
+    <result column="ACC006" property="ACC006" jdbcType="VARCHAR" />
+    <result column="ACC007" property="ACC007" jdbcType="VARCHAR" />
+    <result column="ACC008" property="ACC008" jdbcType="VARCHAR" />
+    <result column="ACC009" property="ACC009" jdbcType="VARCHAR" />
+    <result column="ACC010" property="ACC010" jdbcType="VARCHAR" />
+    <result column="ACC011" property="ACC011" jdbcType="VARCHAR" />
+    <result column="ACC012" property="ACC012" jdbcType="VARCHAR" />
+    <result column="ACC013" property="ACC013" jdbcType="VARCHAR" />
+    <result column="ACC014" property="ACC014" jdbcType="VARCHAR" />
+    <result column="ACC015" property="ACC015" jdbcType="VARCHAR" />
+    <result column="ACC016" property="ACC016" jdbcType="VARCHAR" />
+    <result column="ACC017" property="ACC017" jdbcType="VARCHAR" />
+    <result column="ACC200" property="ACC200" jdbcType="VARCHAR" />
+    <result column="ACC201" property="ACC201" jdbcType="VARCHAR" />
+    <result column="ACC202" property="ACC202" jdbcType="VARCHAR" />
+    <result column="ACC203" property="ACC203" jdbcType="VARCHAR" />
+    <result column="ACC204" property="ACC204" jdbcType="VARCHAR" />
+    <result column="ACC205" property="ACC205" jdbcType="VARCHAR" />
+    <result column="ACC206" property="ACC206" jdbcType="VARCHAR" />
+    <result column="ACC207" property="ACC207" jdbcType="VARCHAR" />
+    <result column="ACC208" property="ACC208" jdbcType="VARCHAR" />
+    <result column="ACC209" property="ACC209" jdbcType="VARCHAR" />
+    <result column="ACC300" property="ACC300" jdbcType="NUMERIC" />
+    <result column="ACC301" property="ACC301" jdbcType="NUMERIC" />
+    <result column="ACC302" property="ACC302" jdbcType="NUMERIC" />
+    <result column="ACC303" property="ACC303" jdbcType="NUMERIC" />
+    <result column="ACC304" property="ACC304" jdbcType="NUMERIC" />
+    <result column="ACC305" property="ACC305" jdbcType="NUMERIC" />
+    <result column="ACC306" property="ACC306" jdbcType="NUMERIC" />
+    <result column="ACC307" property="ACC307" jdbcType="NUMERIC" />
+    <result column="ACC308" property="ACC308" jdbcType="NUMERIC" />
+    <result column="ACC309" property="ACC309" jdbcType="NUMERIC" />
+    <result column="ACC400" property="ACC400" jdbcType="INTEGER" />
+    <result column="ACC401" property="ACC401" jdbcType="INTEGER" />
+    <result column="ACC402" property="ACC402" jdbcType="INTEGER" />
+    <result column="ACC403" property="ACC403" jdbcType="INTEGER" />
+    <result column="ACC404" property="ACC404" jdbcType="INTEGER" />
+    <result column="ACC405" property="ACC405" jdbcType="INTEGER" />
+    <result column="ACC406" property="ACC406" jdbcType="INTEGER" />
+    <result column="ACC407" property="ACC407" jdbcType="INTEGER" />
+    <result column="ACC408" property="ACC408" jdbcType="INTEGER" />
+    <result column="ACC409" property="ACC409" jdbcType="INTEGER" />
+    <result column="ACC901" property="ACC901" jdbcType="VARCHAR" />
+    <result column="ACC902" property="ACC902" jdbcType="VARCHAR" />
+    <result column="ACC903" property="ACC903" jdbcType="VARCHAR" />
+    <result column="ACC904" property="ACC904" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ACC001, ACC002, ACC003, ACC004, ACC005, ACC006, ACC007, ACC008, ACC009, ACC010, ACC011, 
+    ACC012, ACC013, ACC014, ACC015, ACC016, ACC017, ACC200, ACC201, ACC202, ACC203, ACC204, 
+    ACC205, ACC206, ACC207, ACC208, ACC209, ACC300, ACC301, ACC302, ACC303, ACC304, ACC305, 
+    ACC306, ACC307, ACC308, ACC309, ACC400, ACC401, ACC402, ACC403, ACC404, ACC405, ACC406, 
+    ACC407, ACC408, ACC409, ACC901, ACC902, ACC903, ACC904
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from GES_DSCACC
+    where ACC001 = #{ACC001,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAllData" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from  GES_DSCACC
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from GES_DSCACC
+    where ACC001 = #{ACC001,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="ges.Entity.DSCACC" >
+    insert into GES_DSCACC (ACC001, ACC002, ACC003, 
+      ACC004, ACC005, ACC006, 
+      ACC007, ACC008, ACC009, 
+      ACC010, ACC011, ACC012, 
+      ACC013, ACC014, ACC015, 
+      ACC016, ACC017, ACC200, 
+      ACC201, ACC202, ACC203, 
+      ACC204, ACC205, ACC206, 
+      ACC207, ACC208, ACC209, 
+      ACC300, ACC301, ACC302, 
+      ACC303, ACC304, ACC305, 
+      ACC306, ACC307, ACC308, 
+      ACC309, ACC400, ACC401, 
+      ACC402, ACC403, ACC404, 
+      ACC405, ACC406, ACC407, 
+      ACC408, ACC409, ACC901, 
+      ACC902, ACC903, ACC904
+      )
+    values (#{ACC001,jdbcType=VARCHAR}, #{ACC002,jdbcType=VARCHAR}, #{ACC003,jdbcType=VARCHAR}, 
+      #{ACC004,jdbcType=VARCHAR}, #{ACC005,jdbcType=VARCHAR}, #{ACC006,jdbcType=VARCHAR}, 
+      #{ACC007,jdbcType=VARCHAR}, #{ACC008,jdbcType=VARCHAR}, #{ACC009,jdbcType=VARCHAR}, 
+      #{ACC010,jdbcType=VARCHAR}, #{ACC011,jdbcType=VARCHAR}, #{ACC012,jdbcType=VARCHAR}, 
+      #{ACC013,jdbcType=VARCHAR}, #{ACC014,jdbcType=VARCHAR}, #{ACC015,jdbcType=VARCHAR}, 
+      #{ACC016,jdbcType=VARCHAR}, #{ACC017,jdbcType=VARCHAR}, #{ACC200,jdbcType=VARCHAR}, 
+      #{ACC201,jdbcType=VARCHAR}, #{ACC202,jdbcType=VARCHAR}, #{ACC203,jdbcType=VARCHAR}, 
+      #{ACC204,jdbcType=VARCHAR}, #{ACC205,jdbcType=VARCHAR}, #{ACC206,jdbcType=VARCHAR}, 
+      #{ACC207,jdbcType=VARCHAR}, #{ACC208,jdbcType=VARCHAR}, #{ACC209,jdbcType=VARCHAR}, 
+      #{ACC300,jdbcType=NUMERIC}, #{ACC301,jdbcType=NUMERIC}, #{ACC302,jdbcType=NUMERIC}, 
+      #{ACC303,jdbcType=NUMERIC}, #{ACC304,jdbcType=NUMERIC}, #{ACC305,jdbcType=NUMERIC}, 
+      #{ACC306,jdbcType=NUMERIC}, #{ACC307,jdbcType=NUMERIC}, #{ACC308,jdbcType=NUMERIC}, 
+      #{ACC309,jdbcType=NUMERIC}, #{ACC400,jdbcType=INTEGER}, #{ACC401,jdbcType=INTEGER}, 
+      #{ACC402,jdbcType=INTEGER}, #{ACC403,jdbcType=INTEGER}, #{ACC404,jdbcType=INTEGER}, 
+      #{ACC405,jdbcType=INTEGER}, #{ACC406,jdbcType=INTEGER}, #{ACC407,jdbcType=INTEGER}, 
+      #{ACC408,jdbcType=INTEGER}, #{ACC409,jdbcType=INTEGER}, #{ACC901,jdbcType=VARCHAR}, 
+      #{ACC902,jdbcType=VARCHAR}, #{ACC903,jdbcType=VARCHAR}, #{ACC904,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="ges.Entity.DSCACC" >
+    insert into GES_DSCACC
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="ACC001 != null" >
+        ACC001,
+      </if>
+      <if test="ACC002 != null" >
+        ACC002,
+      </if>
+      <if test="ACC003 != null" >
+        ACC003,
+      </if>
+      <if test="ACC004 != null" >
+        ACC004,
+      </if>
+      <if test="ACC005 != null" >
+        ACC005,
+      </if>
+      <if test="ACC006 != null" >
+        ACC006,
+      </if>
+      <if test="ACC007 != null" >
+        ACC007,
+      </if>
+      <if test="ACC008 != null" >
+        ACC008,
+      </if>
+      <if test="ACC009 != null" >
+        ACC009,
+      </if>
+      <if test="ACC010 != null" >
+        ACC010,
+      </if>
+      <if test="ACC011 != null" >
+        ACC011,
+      </if>
+      <if test="ACC012 != null" >
+        ACC012,
+      </if>
+      <if test="ACC013 != null" >
+        ACC013,
+      </if>
+      <if test="ACC014 != null" >
+        ACC014,
+      </if>
+      <if test="ACC015 != null" >
+        ACC015,
+      </if>
+      <if test="ACC016 != null" >
+        ACC016,
+      </if>
+      <if test="ACC017 != null" >
+        ACC017,
+      </if>
+      <if test="ACC200 != null" >
+        ACC200,
+      </if>
+      <if test="ACC201 != null" >
+        ACC201,
+      </if>
+      <if test="ACC202 != null" >
+        ACC202,
+      </if>
+      <if test="ACC203 != null" >
+        ACC203,
+      </if>
+      <if test="ACC204 != null" >
+        ACC204,
+      </if>
+      <if test="ACC205 != null" >
+        ACC205,
+      </if>
+      <if test="ACC206 != null" >
+        ACC206,
+      </if>
+      <if test="ACC207 != null" >
+        ACC207,
+      </if>
+      <if test="ACC208 != null" >
+        ACC208,
+      </if>
+      <if test="ACC209 != null" >
+        ACC209,
+      </if>
+      <if test="ACC300 != null" >
+        ACC300,
+      </if>
+      <if test="ACC301 != null" >
+        ACC301,
+      </if>
+      <if test="ACC302 != null" >
+        ACC302,
+      </if>
+      <if test="ACC303 != null" >
+        ACC303,
+      </if>
+      <if test="ACC304 != null" >
+        ACC304,
+      </if>
+      <if test="ACC305 != null" >
+        ACC305,
+      </if>
+      <if test="ACC306 != null" >
+        ACC306,
+      </if>
+      <if test="ACC307 != null" >
+        ACC307,
+      </if>
+      <if test="ACC308 != null" >
+        ACC308,
+      </if>
+      <if test="ACC309 != null" >
+        ACC309,
+      </if>
+      <if test="ACC400 != null" >
+        ACC400,
+      </if>
+      <if test="ACC401 != null" >
+        ACC401,
+      </if>
+      <if test="ACC402 != null" >
+        ACC402,
+      </if>
+      <if test="ACC403 != null" >
+        ACC403,
+      </if>
+      <if test="ACC404 != null" >
+        ACC404,
+      </if>
+      <if test="ACC405 != null" >
+        ACC405,
+      </if>
+      <if test="ACC406 != null" >
+        ACC406,
+      </if>
+      <if test="ACC407 != null" >
+        ACC407,
+      </if>
+      <if test="ACC408 != null" >
+        ACC408,
+      </if>
+      <if test="ACC409 != null" >
+        ACC409,
+      </if>
+      <if test="ACC901 != null" >
+        ACC901,
+      </if>
+      <if test="ACC902 != null" >
+        ACC902,
+      </if>
+      <if test="ACC903 != null" >
+        ACC903,
+      </if>
+      <if test="ACC904 != null" >
+        ACC904,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="ACC001 != null" >
+        #{ACC001,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC002 != null" >
+        #{ACC002,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC003 != null" >
+        #{ACC003,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC004 != null" >
+        #{ACC004,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC005 != null" >
+        #{ACC005,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC006 != null" >
+        #{ACC006,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC007 != null" >
+        #{ACC007,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC008 != null" >
+        #{ACC008,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC009 != null" >
+        #{ACC009,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC010 != null" >
+        #{ACC010,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC011 != null" >
+        #{ACC011,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC012 != null" >
+        #{ACC012,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC013 != null" >
+        #{ACC013,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC014 != null" >
+        #{ACC014,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC015 != null" >
+        #{ACC015,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC016 != null" >
+        #{ACC016,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC017 != null" >
+        #{ACC017,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC200 != null" >
+        #{ACC200,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC201 != null" >
+        #{ACC201,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC202 != null" >
+        #{ACC202,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC203 != null" >
+        #{ACC203,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC204 != null" >
+        #{ACC204,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC205 != null" >
+        #{ACC205,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC206 != null" >
+        #{ACC206,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC207 != null" >
+        #{ACC207,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC208 != null" >
+        #{ACC208,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC209 != null" >
+        #{ACC209,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC300 != null" >
+        #{ACC300,jdbcType=NUMERIC},
+      </if>
+      <if test="ACC301 != null" >
+        #{ACC301,jdbcType=NUMERIC},
+      </if>
+      <if test="ACC302 != null" >
+        #{ACC302,jdbcType=NUMERIC},
+      </if>
+      <if test="ACC303 != null" >
+        #{ACC303,jdbcType=NUMERIC},
+      </if>
+      <if test="ACC304 != null" >
+        #{ACC304,jdbcType=NUMERIC},
+      </if>
+      <if test="ACC305 != null" >
+        #{ACC305,jdbcType=NUMERIC},
+      </if>
+      <if test="ACC306 != null" >
+        #{ACC306,jdbcType=NUMERIC},
+      </if>
+      <if test="ACC307 != null" >
+        #{ACC307,jdbcType=NUMERIC},
+      </if>
+      <if test="ACC308 != null" >
+        #{ACC308,jdbcType=NUMERIC},
+      </if>
+      <if test="ACC309 != null" >
+        #{ACC309,jdbcType=NUMERIC},
+      </if>
+      <if test="ACC400 != null" >
+        #{ACC400,jdbcType=INTEGER},
+      </if>
+      <if test="ACC401 != null" >
+        #{ACC401,jdbcType=INTEGER},
+      </if>
+      <if test="ACC402 != null" >
+        #{ACC402,jdbcType=INTEGER},
+      </if>
+      <if test="ACC403 != null" >
+        #{ACC403,jdbcType=INTEGER},
+      </if>
+      <if test="ACC404 != null" >
+        #{ACC404,jdbcType=INTEGER},
+      </if>
+      <if test="ACC405 != null" >
+        #{ACC405,jdbcType=INTEGER},
+      </if>
+      <if test="ACC406 != null" >
+        #{ACC406,jdbcType=INTEGER},
+      </if>
+      <if test="ACC407 != null" >
+        #{ACC407,jdbcType=INTEGER},
+      </if>
+      <if test="ACC408 != null" >
+        #{ACC408,jdbcType=INTEGER},
+      </if>
+      <if test="ACC409 != null" >
+        #{ACC409,jdbcType=INTEGER},
+      </if>
+      <if test="ACC901 != null" >
+        #{ACC901,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC902 != null" >
+        #{ACC902,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC903 != null" >
+        #{ACC903,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC904 != null" >
+        #{ACC904,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="ges.Entity.DSCACC" >
+    update GES_DSCACC
+    <set >
+      <if test="ACC002 != null" >
+        ACC002 = #{ACC002,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC003 != null" >
+        ACC003 = #{ACC003,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC004 != null" >
+        ACC004 = #{ACC004,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC005 != null" >
+        ACC005 = #{ACC005,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC006 != null" >
+        ACC006 = #{ACC006,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC007 != null" >
+        ACC007 = #{ACC007,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC008 != null" >
+        ACC008 = #{ACC008,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC009 != null" >
+        ACC009 = #{ACC009,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC010 != null" >
+        ACC010 = #{ACC010,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC011 != null" >
+        ACC011 = #{ACC011,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC012 != null" >
+        ACC012 = #{ACC012,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC013 != null" >
+        ACC013 = #{ACC013,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC014 != null" >
+        ACC014 = #{ACC014,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC015 != null" >
+        ACC015 = #{ACC015,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC016 != null" >
+        ACC016 = #{ACC016,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC017 != null" >
+        ACC017 = #{ACC017,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC200 != null" >
+        ACC200 = #{ACC200,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC201 != null" >
+        ACC201 = #{ACC201,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC202 != null" >
+        ACC202 = #{ACC202,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC203 != null" >
+        ACC203 = #{ACC203,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC204 != null" >
+        ACC204 = #{ACC204,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC205 != null" >
+        ACC205 = #{ACC205,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC206 != null" >
+        ACC206 = #{ACC206,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC207 != null" >
+        ACC207 = #{ACC207,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC208 != null" >
+        ACC208 = #{ACC208,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC209 != null" >
+        ACC209 = #{ACC209,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC300 != null" >
+        ACC300 = #{ACC300,jdbcType=NUMERIC},
+      </if>
+      <if test="ACC301 != null" >
+        ACC301 = #{ACC301,jdbcType=NUMERIC},
+      </if>
+      <if test="ACC302 != null" >
+        ACC302 = #{ACC302,jdbcType=NUMERIC},
+      </if>
+      <if test="ACC303 != null" >
+        ACC303 = #{ACC303,jdbcType=NUMERIC},
+      </if>
+      <if test="ACC304 != null" >
+        ACC304 = #{ACC304,jdbcType=NUMERIC},
+      </if>
+      <if test="ACC305 != null" >
+        ACC305 = #{ACC305,jdbcType=NUMERIC},
+      </if>
+      <if test="ACC306 != null" >
+        ACC306 = #{ACC306,jdbcType=NUMERIC},
+      </if>
+      <if test="ACC307 != null" >
+        ACC307 = #{ACC307,jdbcType=NUMERIC},
+      </if>
+      <if test="ACC308 != null" >
+        ACC308 = #{ACC308,jdbcType=NUMERIC},
+      </if>
+      <if test="ACC309 != null" >
+        ACC309 = #{ACC309,jdbcType=NUMERIC},
+      </if>
+      <if test="ACC400 != null" >
+        ACC400 = #{ACC400,jdbcType=INTEGER},
+      </if>
+      <if test="ACC401 != null" >
+        ACC401 = #{ACC401,jdbcType=INTEGER},
+      </if>
+      <if test="ACC402 != null" >
+        ACC402 = #{ACC402,jdbcType=INTEGER},
+      </if>
+      <if test="ACC403 != null" >
+        ACC403 = #{ACC403,jdbcType=INTEGER},
+      </if>
+      <if test="ACC404 != null" >
+        ACC404 = #{ACC404,jdbcType=INTEGER},
+      </if>
+      <if test="ACC405 != null" >
+        ACC405 = #{ACC405,jdbcType=INTEGER},
+      </if>
+      <if test="ACC406 != null" >
+        ACC406 = #{ACC406,jdbcType=INTEGER},
+      </if>
+      <if test="ACC407 != null" >
+        ACC407 = #{ACC407,jdbcType=INTEGER},
+      </if>
+      <if test="ACC408 != null" >
+        ACC408 = #{ACC408,jdbcType=INTEGER},
+      </if>
+      <if test="ACC409 != null" >
+        ACC409 = #{ACC409,jdbcType=INTEGER},
+      </if>
+      <if test="ACC901 != null" >
+        ACC901 = #{ACC901,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC902 != null" >
+        ACC902 = #{ACC902,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC903 != null" >
+        ACC903 = #{ACC903,jdbcType=VARCHAR},
+      </if>
+      <if test="ACC904 != null" >
+        ACC904 = #{ACC904,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ACC001 = #{ACC001,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="ges.Entity.DSCACC" >
+    update GES_DSCACC
+    set ACC002 = #{ACC002,jdbcType=VARCHAR},
+      ACC003 = #{ACC003,jdbcType=VARCHAR},
+      ACC004 = #{ACC004,jdbcType=VARCHAR},
+      ACC005 = #{ACC005,jdbcType=VARCHAR},
+      ACC006 = #{ACC006,jdbcType=VARCHAR},
+      ACC007 = #{ACC007,jdbcType=VARCHAR},
+      ACC008 = #{ACC008,jdbcType=VARCHAR},
+      ACC009 = #{ACC009,jdbcType=VARCHAR},
+      ACC010 = #{ACC010,jdbcType=VARCHAR},
+      ACC011 = #{ACC011,jdbcType=VARCHAR},
+      ACC012 = #{ACC012,jdbcType=VARCHAR},
+      ACC013 = #{ACC013,jdbcType=VARCHAR},
+      ACC014 = #{ACC014,jdbcType=VARCHAR},
+      ACC015 = #{ACC015,jdbcType=VARCHAR},
+      ACC016 = #{ACC016,jdbcType=VARCHAR},
+      ACC017 = #{ACC017,jdbcType=VARCHAR},
+      ACC200 = #{ACC200,jdbcType=VARCHAR},
+      ACC201 = #{ACC201,jdbcType=VARCHAR},
+      ACC202 = #{ACC202,jdbcType=VARCHAR},
+      ACC203 = #{ACC203,jdbcType=VARCHAR},
+      ACC204 = #{ACC204,jdbcType=VARCHAR},
+      ACC205 = #{ACC205,jdbcType=VARCHAR},
+      ACC206 = #{ACC206,jdbcType=VARCHAR},
+      ACC207 = #{ACC207,jdbcType=VARCHAR},
+      ACC208 = #{ACC208,jdbcType=VARCHAR},
+      ACC209 = #{ACC209,jdbcType=VARCHAR},
+      ACC300 = #{ACC300,jdbcType=NUMERIC},
+      ACC301 = #{ACC301,jdbcType=NUMERIC},
+      ACC302 = #{ACC302,jdbcType=NUMERIC},
+      ACC303 = #{ACC303,jdbcType=NUMERIC},
+      ACC304 = #{ACC304,jdbcType=NUMERIC},
+      ACC305 = #{ACC305,jdbcType=NUMERIC},
+      ACC306 = #{ACC306,jdbcType=NUMERIC},
+      ACC307 = #{ACC307,jdbcType=NUMERIC},
+      ACC308 = #{ACC308,jdbcType=NUMERIC},
+      ACC309 = #{ACC309,jdbcType=NUMERIC},
+      ACC400 = #{ACC400,jdbcType=INTEGER},
+      ACC401 = #{ACC401,jdbcType=INTEGER},
+      ACC402 = #{ACC402,jdbcType=INTEGER},
+      ACC403 = #{ACC403,jdbcType=INTEGER},
+      ACC404 = #{ACC404,jdbcType=INTEGER},
+      ACC405 = #{ACC405,jdbcType=INTEGER},
+      ACC406 = #{ACC406,jdbcType=INTEGER},
+      ACC407 = #{ACC407,jdbcType=INTEGER},
+      ACC408 = #{ACC408,jdbcType=INTEGER},
+      ACC409 = #{ACC409,jdbcType=INTEGER},
+      ACC901 = #{ACC901,jdbcType=VARCHAR},
+      ACC902 = #{ACC902,jdbcType=VARCHAR},
+      ACC903 = #{ACC903,jdbcType=VARCHAR},
+      ACC904 = #{ACC904,jdbcType=VARCHAR}
+    where ACC001 = #{ACC001,jdbcType=VARCHAR}
+  </update>
+</mapper>
