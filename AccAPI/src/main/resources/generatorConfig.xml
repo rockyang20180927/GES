@@ -14,7 +14,7 @@
     <javaTypeResolver>  
          <property name="forceBigDecimals" value="false" />  
      </javaTypeResolver>          
-     <javaModelGenerator targetPackage="ges.Entity"
+     <javaModelGenerator targetPackage="ges.acc.Entity"
      					targetProject="src/main/java">
 	      <property name="enableSubPackages" value="true"/>             
 	       <!-- 从数据库返回的值被清理前后的空格  -->              
@@ -22,7 +22,7 @@
     </javaModelGenerator>  
     <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources">
     </sqlMapGenerator>
-    <javaClientGenerator targetPackage="ges.Dao" targetProject="src/main/java" type="XMLMAPPER" >
+    <javaClientGenerator targetPackage="ges.acc.Dao" targetProject="src/main/java" type="XMLMAPPER" >
     
     </javaClientGenerator>
     

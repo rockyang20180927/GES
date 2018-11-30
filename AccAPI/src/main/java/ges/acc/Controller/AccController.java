@@ -1,7 +1,7 @@
-package ges.Controller;
+package ges.acc.Controller;
 
-import ges.Dao.DSCACCMapper;
-import ges.Entity.DSCACC;
+import ges.acc.Dao.DSCACCMapper;
+import ges.acc.Entity.DSCACC;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,14 +19,14 @@ import java.util.List;
 @RestController
 @RequestMapping("/Acc")
 public class AccController {
-    @Autowired
-    DSCACCMapper dao;
+   @Autowired
+   private  DSCACCMapper DAO;
 
     @RequestMapping("/list")
     public List<AccList> getAllAccData()
     {
         List<AccList> listall=new ArrayList<AccList>();
-        List<DSCACC> list=dao.selectAllData();
+        List<DSCACC> list=DAO.selectAllData();
         for (DSCACC dscacc:
                 list) {
             AccList accList=new AccList();

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="ges.Dao.DSCACCMapper" >
-  <resultMap id="BaseResultMap" type="ges.Entity.DSCACC" >
+<mapper namespace="ges.acc.Dao.DSCACCMapper" >
+  <resultMap id="BaseResultMap" type="ges.acc.Entity.DSCACC" >
     <id column="ACC001" property="ACC001" jdbcType="VARCHAR" />
     <result column="ACC002" property="ACC002" jdbcType="VARCHAR" />
     <result column="ACC003" property="ACC003" jdbcType="VARCHAR" />
@@ -76,7 +76,7 @@
     delete from GES_DSCACC
     where ACC001 = #{ACC001,jdbcType=VARCHAR}
   </delete>
-  <insert id="insert" parameterType="ges.Entity.DSCACC" >
+  <insert id="insert" parameterType="ges.acc.Entity.DSCACC" >
     insert into GES_DSCACC (ACC001, ACC002, ACC003, 
       ACC004, ACC005, ACC006, 
       ACC007, ACC008, ACC009, 
@@ -114,7 +114,7 @@
       #{ACC902,jdbcType=VARCHAR}, #{ACC903,jdbcType=VARCHAR}, #{ACC904,jdbcType=VARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="ges.Entity.DSCACC" >
+  <insert id="insertSelective" parameterType="ges.acc.Entity.DSCACC" >
     insert into GES_DSCACC
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="ACC001 != null" >
@@ -427,7 +427,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="ges.Entity.DSCACC" >
+  <update id="updateByPrimaryKeySelective" parameterType="ges.acc.Entity.DSCACC" >
     update GES_DSCACC
     <set >
       <if test="ACC002 != null" >
@@ -583,7 +583,7 @@
     </set>
     where ACC001 = #{ACC001,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="ges.Entity.DSCACC" >
+  <update id="updateByPrimaryKey" parameterType="ges.acc.Entity.DSCACC" >
     update GES_DSCACC
     set ACC002 = #{ACC002,jdbcType=VARCHAR},
       ACC003 = #{ACC003,jdbcType=VARCHAR},

@@ -1,4 +1,4 @@
-package ges.Entity;
+package ges.acc.Entity;
 
 import java.math.BigDecimal;
 

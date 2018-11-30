@@ -1,6 +1,6 @@
-package ges.Dao;
+package ges.acc.Dao;
 
-import ges.Entity.DSCACC;
+import ges.acc.Entity.DSCACC;
 
 import java.util.List;
 
